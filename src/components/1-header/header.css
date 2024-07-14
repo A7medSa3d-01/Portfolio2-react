@@ -1,0 +1,156 @@
+header.flex {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1rem;
+}
+
+header .fixed,
+header.flex .bullets {
+  display: none;
+}
+
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0.7rem 1.5rem;
+  border-radius: 55px;
+  box-shadow: 2px 2px 2px #2323242a;
+}
+
+header ul.flex {
+  gap: 16px;
+}
+
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition03s);
+}
+
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+}
+
+header button {
+  font-size: 1.2rem;
+}
+
+/*Icons*/
+header .icon-menu,
+header button.moon {
+  background-color: var(--bgHeader);
+  color: var(--subtitle);
+  text-align: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 165, 96, 0.249);
+  transition: var(--transition03s);
+  box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
+}
+
+header .icon-menu:hover,
+header button.moon:hover {
+  color: white;
+  border: 1px solid rgba(244, 165, 96);
+}
+
+header .icon-remove {
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: var(--transition03s);
+}
+
+header .icon-remove:hover {
+  font-size: 1.7rem;
+  color: crimson;
+  rotate: 180deg;
+}
+
+header .icon-sun{
+  color: orange;
+}
+
+@media (max-width: 900px) {
+  header.flex nav {
+    display: none;
+  }
+
+  header.flex .bullets {
+    display: block;
+  }
+
+  header .fixed {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(40, 40, 48, 0.8);
+    z-index: 999;
+    transition: var(--transition03s);
+    backdrop-filter: blur(8px);
+  }
+
+  header .fixed ul.model {
+    width: 75%;
+    margin-inline: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    animation: bullets 0.7s 1;
+  }
+
+  header .fixed ul li:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  header .fixed ul li {
+    padding-bottom: 0.8rem;
+    padding-top: 0.5rem;
+    cursor: pointer;
+  }
+
+  header .fixed ul li:not(:first-child):hover {
+    background-color: rgba(143, 143, 143, 0.044);
+  }
+
+  header .fixed ul li a {
+    font-size: 1rem;
+    z-index: 4;
+  }
+
+  header .fixed ul li:hover a {
+    color: var(--blue);
+    padding: 12px;
+    font-size: 1.02rem;
+  }
+
+  header .fixed .model li:first-child {
+    text-align: right;
+    border: none;
+    padding-bottom: 0;
+    padding-top: 0.2rem;
+    margin-bottom: -1rem;
+  }
+}
+
+@keyframes bullets {
+  0% {
+    scale: 0;
+  }
+
+  40% {
+    scale: 1.02;
+  }
+
+  60% {
+    scale: 0.98;
+  }
+
+  100% {
+    scale: 1;
+  }
+}

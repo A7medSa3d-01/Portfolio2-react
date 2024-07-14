@@ -1,2 +1,2 @@
-# Portfolio2-react
-Portfolio design using Reac.js
+# React-portfolio
+Portfolio web design using React.js

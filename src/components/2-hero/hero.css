@@ -1,0 +1,73 @@
+.hero {
+  margin-top: 3rem;
+  padding: 20px 30px 0 30px;
+}
+
+.hero .left-side {
+  flex-grow: 1;
+}
+
+.hero .parent {
+  align-items: end;
+  gap: 0.6rem;
+  min-height: 88px;
+}
+
+.hero img {
+  border-radius: 50%;
+  width: 88px;
+  border: 1px solid rgba(244, 165, 96);
+  padding: 2px;
+  cursor: pointer;
+}
+
+.hero .icon-verified {
+  color: var(--blue);
+  font-size: 1.1rem;
+}
+
+.hero h1 {
+  font-size: 2.85rem;
+  line-height: 3.3rem;
+  margin: 24px 0;
+  color: var(--title);
+}
+
+.hero p {
+  font-size: 0.9rem;
+  line-height: 1.65rem;
+  color: var(--subtitle);
+}
+
+.hero .social {
+  font-size: 1.3rem;
+  gap: 1.5rem;
+  color: var(--subtitle);
+  transition: var(--transition03s);
+}
+
+.hero .social .icon{
+  transition: var(--transition03s);
+  cursor: pointer;
+}
+
+.hero .social .icon:hover {
+  font-size: 1.4rem;
+  gap: 1.5rem;
+  color: var(--subtitle);
+  color: var(--icon-hover);
+}
+
+.hero .social span {
+  padding-right: 20px;
+  margin-top:32px;
+}
+.animation{
+  width: 100%;
+  translate: 100px 55px;
+}
+@media (max-width: 1250px) {
+  .animation {
+    display: none;
+  }
+}
